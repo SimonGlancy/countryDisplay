@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html ng-app="populationCalculator">
+<head>
+
+  <!-- Scripts -->
+  <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.2.19/angular.min.js"></script>
+
+  <link rel='stylesheet' type='text/css' href='app/js/styles/style.css'></link>
+  <!-- app -->
+  <script src="app/js/app.js"></script>
+  <!-- services -->
+  <script src="app/js/services/countriesService.js"></script>
+  <!-- controllers -->
+  <script src="app/js/controllers/mainController.js"></script>
+  <!-- filters -->
+
+  <title>Population Calculator</title>
+  <base href="/">
+</head>
+
+
+<body ng-controller="MainCtrl" >
+  <div class="active-container">
+    <div class="header-container">
+      <div class="pCalc-header">Population Calculator</div>
+    </div>
+
+    <section class="canvas">
+      <div class="control-panel">
+        <a class="load-button" ng-click="getCountries()">Load Countries</a>
+        <a class="load-button" ng-click="sort('population')">Sort Countries</a>
+      </div>
+
+      <section class="presentation-area">
+        <table>
+
+          <tr>
+            <th class="name">Name</th>
+            <th class="poulation">Population</th>
+          </tr>
+
+
+          <tr ng-repeat="country in countries">
+            <td>{{ country.country}}</td>
+            <td>{{country.population}}</td>
+          </tr>
+        </table>
+      </section>
+    </section>
+  </div>
+
+</body>
+
+</html>

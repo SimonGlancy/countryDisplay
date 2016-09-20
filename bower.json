@@ -1,0 +1,21 @@
+{
+  "name": "escapists",
+  "description": "population calculator",
+  "main": "app.js",
+  "authors": [
+    "Simon T Glancy <si.glancy@gmail.com>"
+  ],
+  "license": "MIT",
+  "homepage": "si.glancy@gmail.com",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests",
+    "web-background-nurse",
+    "web-background-smudge-nurse",
+    "web-background",
+    "web-background-smudge"
+  ]
+}
